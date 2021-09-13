@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -51,18 +52,18 @@ public class Agenda extends javax.swing.JFrame {
         jOptionPane1 = new javax.swing.JOptionPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textdni = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        textnombre = new javax.swing.JTextField();
+        textapellido = new javax.swing.JTextField();
+        textfecha = new javax.swing.JTextField();
+        textdic = new javax.swing.JTextField();
+        textel = new javax.swing.JTextField();
+        BotonGrabar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -109,12 +110,12 @@ public class Agenda extends javax.swing.JFrame {
 
         jLabel1.setText("DNI");
 
-        jTextField1.setMaximumSize(new java.awt.Dimension(100, 20));
-        jTextField1.setMinimumSize(new java.awt.Dimension(100, 20));
-        jTextField1.setPreferredSize(new java.awt.Dimension(100, 20));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        textdni.setMaximumSize(new java.awt.Dimension(100, 20));
+        textdni.setMinimumSize(new java.awt.Dimension(100, 20));
+        textdni.setPreferredSize(new java.awt.Dimension(100, 20));
+        textdni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                textdniActionPerformed(evt);
             }
         });
 
@@ -128,20 +129,20 @@ public class Agenda extends javax.swing.JFrame {
 
         jLabel6.setText("Telefono");
 
-        jTextField2.setPreferredSize(new java.awt.Dimension(100, 20));
+        textnombre.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jTextField3.setPreferredSize(new java.awt.Dimension(100, 20));
+        textapellido.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jTextField4.setPreferredSize(new java.awt.Dimension(100, 20));
+        textfecha.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jTextField5.setPreferredSize(new java.awt.Dimension(100, 20));
+        textdic.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jTextField6.setPreferredSize(new java.awt.Dimension(100, 20));
+        textel.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jButton1.setText("Grabar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonGrabar.setText("Grabar");
+        BotonGrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonGrabarActionPerformed(evt);
             }
         });
 
@@ -180,42 +181,41 @@ public class Agenda extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(89, 89, 89)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(textdic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(textel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addComponent(jButton3)
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton1)
-                                    .addGap(39, 39, 39)
-                                    .addComponent(jButton2))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(3, 3, 3)
-                                    .addComponent(jLabel8)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(BotonGrabar)
+                                .addGap(39, 39, 39)
+                                .addComponent(jButton2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLabel8)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -225,16 +225,16 @@ public class Agenda extends javax.swing.JFrame {
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textfecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textdic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +242,7 @@ public class Agenda extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
                                 .addGap(31, 31, 31)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -252,10 +252,10 @@ public class Agenda extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
-                            .addComponent(jButton1)
+                            .addComponent(BotonGrabar)
                             .addComponent(jButton2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(22, 22, 22))
         );
@@ -279,20 +279,32 @@ public class Agenda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotonGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGrabarActionPerformed
         // TODO add your handling code here:
-        String dni = jTextField1.getText();
-        String nombre = jTextField2.getText();
-        String apellido = jTextField3.getText();
-        String fechanac = jTextField4.getText();
-        String direccion = jTextField5.getText();
-        String telefono = jTextField6.getText();
-        controlador.GrabarPersona(dni, nombre, apellido, fechanac, direccion, telefono, id);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        try {
+            String dni = textdni.getText();
+            String nombre = textnombre.getText();
+            String apellido = textapellido.getText();
+            String fechanac = textfecha.getText();
+            String direccion = textdic.getText();
+            String telefono = textel.getText();
+            controlador.GrabarPersona(dni, nombre, apellido, fechanac, direccion, telefono, id);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(jOptionPane1, "Los valores ingresados no son correctos. Intente de nuevo");
+            textdni.setText("");
+            textnombre.setText("");
+            textapellido.setText("");
+            textfecha.setText("");
+            textdic.setText("");
+            textel.setText("");
+        }
+        
+        
+    }//GEN-LAST:event_BotonGrabarActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void textdniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textdniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_textdniActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -300,14 +312,15 @@ public class Agenda extends javax.swing.JFrame {
             id++;
             jTextField7.setText(String.valueOf(id));
         } else {
-            System.out.println("desbordamiento");
+            JOptionPane.showMessageDialog(jOptionPane1, "El indice no puede ser mayor a 9");
         }
-        jTextField1.setText(String.valueOf(controlador.mostrarDni(id)));
-        jTextField2.setText(controlador.mostrarNombre(id));
-        jTextField3.setText(controlador.mostrarApellido(id));
-        jTextField4.setText(String.valueOf(controlador.mostrarFechanac(id)));
-        jTextField5.setText(controlador.mostrarDireccion(id));
-        jTextField6.setText(controlador.mostrarTelefono(id));
+   
+        textdni.setText(String.valueOf(controlador.mostrarDni(id)));
+        textnombre.setText(controlador.mostrarNombre(id));
+        textapellido.setText(controlador.mostrarApellido(id));
+        textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        textdic.setText(controlador.mostrarDireccion(id));
+        textel.setText(controlador.mostrarTelefono(id));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -316,15 +329,14 @@ public class Agenda extends javax.swing.JFrame {
             id--;
             jTextField7.setText(String.valueOf(id));
         } else {
-            System.out.println("desbordamiento");
-            
+            JOptionPane.showMessageDialog(jOptionPane1, "El indice no puede ser menor a 0");
         }
-        jTextField1.setText(String.valueOf(controlador.mostrarDni(id)));
-        jTextField2.setText(controlador.mostrarNombre(id));
-        jTextField3.setText(controlador.mostrarApellido(id));
-        jTextField4.setText(String.valueOf(controlador.mostrarFechanac(id)));
-        jTextField5.setText(controlador.mostrarDireccion(id));
-        jTextField6.setText(controlador.mostrarTelefono(id));
+        textdni.setText(controlador.mostrarDni(id));
+        textnombre.setText(controlador.mostrarNombre(id));
+        textapellido.setText(controlador.mostrarApellido(id));
+        textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        textdic.setText(controlador.mostrarDireccion(id));
+        textel.setText(controlador.mostrarTelefono(id));
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -363,7 +375,7 @@ public class Agenda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BotonGrabar;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
@@ -379,13 +391,13 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField textapellido;
+    private javax.swing.JTextField textdic;
+    private javax.swing.JTextField textdni;
+    private javax.swing.JTextField textel;
+    private javax.swing.JTextField textfecha;
+    private javax.swing.JTextField textnombre;
     // End of variables declaration//GEN-END:variables
 
 }

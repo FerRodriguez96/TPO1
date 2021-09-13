@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Controlador {
 
-    private final int[] dni = new int[10];
+    private final String[] dni = new String[10];
     private final String[] nombre = new String[10];
     private final String[] apellido = new String[10];
     private final LocalDate[] fechanac = new LocalDate[10];
@@ -18,7 +18,7 @@ public class Controlador {
 
     public void GrabarPersona(String textdni, String textnombre, String textapellido, String textfechanac, String textdireccion, String texttelefono, int id) {
 
-        int lista = Integer.parseInt(textdni);
+        String lista = textdni;
         dni[id] = lista;
 
         String lista2 = textnombre;
@@ -39,7 +39,7 @@ public class Controlador {
 
     }
     
-     public int mostrarDni(int id){
+     public String mostrarDni(int id){
         return dni[id];
     }
      
