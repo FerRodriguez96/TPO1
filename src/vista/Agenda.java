@@ -287,8 +287,8 @@ public class Agenda extends javax.swing.JFrame {
             textdic.setText("");
             textel.setText("");
         }
-        
-        
+
+
     }//GEN-LAST:event_BotonGrabarActionPerformed
 
     private void BotonAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAdelanteActionPerformed
@@ -299,11 +299,15 @@ public class Agenda extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(jOptionPane1, "El indice no puede ser mayor a 9");
         }
-   
+        
         textdni.setText(controlador.mostrarDni(id));
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
-        textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        if (controlador.mostrarFechanac(id) != null){
+            textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        }else{
+            textfecha.setText("");
+        }
         textdic.setText(controlador.mostrarDireccion(id));
         textel.setText(controlador.mostrarTelefono(id));
     }//GEN-LAST:event_BotonAdelanteActionPerformed
@@ -319,7 +323,11 @@ public class Agenda extends javax.swing.JFrame {
         textdni.setText(controlador.mostrarDni(id));
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
-        textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        if (controlador.mostrarFechanac(id) != null){
+            textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+        }else{
+            textfecha.setText("");
+        }
         textdic.setText(controlador.mostrarDireccion(id));
         textel.setText(controlador.mostrarTelefono(id));
     }//GEN-LAST:event_BotonAtrasActionPerformed
