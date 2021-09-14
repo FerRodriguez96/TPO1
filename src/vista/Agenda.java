@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.*;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 
 /**
@@ -304,7 +305,9 @@ public class Agenda extends javax.swing.JFrame {
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
         if (controlador.mostrarFechanac(id) != null){
-            textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+            DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            String fecha_str = controlador.mostrarFechanac(id).format(formateador);
+            textfecha.setText(fecha_str);
         }else{
             textfecha.setText("");
         }
@@ -324,7 +327,9 @@ public class Agenda extends javax.swing.JFrame {
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
         if (controlador.mostrarFechanac(id) != null){
-            textfecha.setText(String.valueOf(controlador.mostrarFechanac(id)));
+            DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            String fecha_str = controlador.mostrarFechanac(id).format(formateador);
+            textfecha.setText(fecha_str);
         }else{
             textfecha.setText("");
         }
