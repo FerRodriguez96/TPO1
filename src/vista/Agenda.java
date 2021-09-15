@@ -271,16 +271,27 @@ public class Agenda extends javax.swing.JFrame {
 
     private void BotonGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGrabarActionPerformed
         // TODO add your handling code here:
-        try {
-            String dni = textdni.getText();
-            String nombre = textnombre.getText();
-            String apellido = textapellido.getText();
-            String fechanac = textfecha.getText();
-            String direccion = textdic.getText();
-            String telefono = textel.getText();
-            controlador.GrabarPersona(dni, nombre, apellido, fechanac, direccion, telefono, id);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(jOptionPane1, "Los valores ingresados no son correctos. Intente de nuevo");
+        if (!textdni.getText().equals(controlador.mostrarDni(id))) {
+            try {
+                String dni = textdni.getText();
+                String nombre = textnombre.getText();
+                String apellido = textapellido.getText();
+                String fechanac = textfecha.getText();
+                String direccion = textdic.getText();
+                String telefono = textel.getText();
+                controlador.GrabarPersona(dni, nombre, apellido, fechanac, direccion, telefono, id);
+                JOptionPane.showMessageDialog(jOptionPane1, "Los datos ingresados han sido guardados exitosamente");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(jOptionPane1, "Los valores ingresados no son correctos. Intente de nuevo");
+                textdni.setText("");
+                textnombre.setText("");
+                textapellido.setText("");
+                textfecha.setText("");
+                textdic.setText("");
+                textel.setText("");
+            }
+        } else {
+            JOptionPane.showMessageDialog(jOptionPane1, "Ese usuario ya existe");
             textdni.setText("");
             textnombre.setText("");
             textapellido.setText("");
@@ -288,8 +299,6 @@ public class Agenda extends javax.swing.JFrame {
             textdic.setText("");
             textel.setText("");
         }
-
-
     }//GEN-LAST:event_BotonGrabarActionPerformed
 
     private void BotonAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAdelanteActionPerformed
@@ -304,11 +313,11 @@ public class Agenda extends javax.swing.JFrame {
         textdni.setText(controlador.mostrarDni(id));
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
-        if (controlador.mostrarFechanac(id) != null){
+        if (controlador.mostrarFechanac(id) != null) {
             DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             String fecha_str = controlador.mostrarFechanac(id).format(formateador);
             textfecha.setText(fecha_str);
-        }else{
+        } else {
             textfecha.setText("");
         }
         textdic.setText(controlador.mostrarDireccion(id));
@@ -326,11 +335,11 @@ public class Agenda extends javax.swing.JFrame {
         textdni.setText(controlador.mostrarDni(id));
         textnombre.setText(controlador.mostrarNombre(id));
         textapellido.setText(controlador.mostrarApellido(id));
-        if (controlador.mostrarFechanac(id) != null){
+        if (controlador.mostrarFechanac(id) != null) {
             DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             String fecha_str = controlador.mostrarFechanac(id).format(formateador);
             textfecha.setText(fecha_str);
-        }else{
+        } else {
             textfecha.setText("");
         }
         textdic.setText(controlador.mostrarDireccion(id));
